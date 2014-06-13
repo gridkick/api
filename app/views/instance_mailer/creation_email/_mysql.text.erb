@@ -1,0 +1,11 @@
+Your MySQL database specific configuration is...
+
+User: <%= @instance.foreign_instance_data.first[ 'username' ] %>
+
+Password: Get it by logging into your GridKick account and viewing your instances.
+
+You can try it out right away by connecting with the `mysql` CLI in your terminal:
+
+$ mysql -h <%= @instance.foreign_instance_data.first[ 'host' ] %> -P <%= @instance.foreign_instance_data.first[ 'port' ] %> -u <%= @instance.foreign_instance_data.first[ 'username' ] %> -p
+
+If the above command is successful, you will be connected to the remote database terminal after you enter your provided password.

@@ -1,0 +1,1 @@
+AdventureApi::Application.config.secret_token = "QRSbpT2RT4S2YbNst5egqJUzAXvZCkHnqZnTqH2FmdaqbmxsSnJZbVfWa6g6NF4sZFAYFDQGGfXT7vzk"

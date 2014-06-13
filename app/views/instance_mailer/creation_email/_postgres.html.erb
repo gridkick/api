@@ -1,0 +1,24 @@
+<p>
+  Your Postgres database specific configuration is...
+</p>
+
+<ul>
+  <li>
+    User: <%= @instance.foreign_instance_data.first[ 'username' ] %>
+  </li>
+  <li>
+    Password: Get it by logging into your <%= link_to 'GridKick account', root_url + "login" %> account and viewing your instances.
+  </li>
+</ul>
+
+<p>
+  You can try it out right away by connecting with the `psql` CLI in your terminal:
+</p>
+
+<code>
+  $ psql -h <%= @instance.foreign_instance_data.first[ 'host' ] %> -p <%= @instance.foreign_instance_data.first[ 'port' ] %> -U <%= @instance.foreign_instance_data.first[ 'username' ] %> postgres
+</code>
+
+<p>
+  If the above command is successful, you will be connected to the remote database terminal after you enter your provided password.
+</p>

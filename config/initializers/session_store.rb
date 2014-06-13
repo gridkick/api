@@ -1,0 +1,1 @@
+AdventureApi::Application.config.session_store :cookie_store, :key => '_adventure_api_session'

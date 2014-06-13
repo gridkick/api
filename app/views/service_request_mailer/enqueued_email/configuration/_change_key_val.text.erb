@@ -1,0 +1,9 @@
+<%
+  key = @service_request.request_data.fetch 'key' , 'unknown'
+  val = @service_request.request_data.fetch 'val' , 'unknown'
+%>
+Requested Change: Update configuration
+
+Key: <%= key %>
+
+New Value: <%= val %>

@@ -1,0 +1,6 @@
+<%
+  plugin_text = @service_request.request_data.fetch( 'addon_key' , 'unknown' ).titleize
+%>
+<p>
+  Requested Change: Disable <%= plugin_text %> Addon
+</p>

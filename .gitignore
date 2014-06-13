@@ -1,0 +1,12 @@
+/.advrc
+/.bundle
+/.env
+/.ruby-version
+/.vagrant
+/config/deploy/*.env
+/db/*.sqlite3
+/log/*.log
+/script/test_*
+/tmp
+/vendor/bundle
+NOTES.md

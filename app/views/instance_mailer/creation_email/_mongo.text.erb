@@ -1,0 +1,15 @@
+Your MongoDB specific configuration is...
+
+User: <%= @instance.foreign_instance_data.first[ 'username' ] %>
+
+Password: Get it by logging into your GridKick account and viewing your instances.
+
+You can try it out right away by connecting with the `mongo` CLI in your terminal:
+
+$ mongo <%= @instance.foreign_instance_data.first[ 'host' ] %>:<%= @instance.foreign_instance_data.first[ 'port' ] %>/admin --username <%= @instance.foreign_instance_data.first['username'] %> -p
+
+...and running the `show dbs` command:
+
+# show dbs
+
+If the above command is successful, you will see an empty list and the disk size of your database.

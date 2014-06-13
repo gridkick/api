@@ -1,0 +1,20 @@
+<h2>Instances</h2>
+
+<table>
+  <tr>
+    <td>Instance ID</td>
+    <td>Instance Type</td>
+    <td>Instance IP</td>
+    <td>User ID</td>
+    <td>User Email</td>
+  </tr>
+  <% @instances.each do |instance| %>
+    <tr>
+      <td><%= instance.id.to_s %></td>
+      <td><%= instance.slug %></td>
+      <td></td>
+    </tr>
+
+  <% end %>
+</table>
+

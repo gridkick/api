@@ -1,0 +1,4 @@
+<%
+  ip_address = @service_request.request_data.fetch 'ip_address' , 'unknown'
+%>
+Requested Change: Update firewall IP address whitelist to remove <%= ip_address %>

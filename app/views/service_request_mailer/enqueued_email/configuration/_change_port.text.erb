@@ -1,0 +1,4 @@
+<%
+  port = @service_request.request_data.fetch 'port' , 'unknown'
+%>
+Requested Change: Update service port to <%= port %>

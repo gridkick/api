@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>
+      <%= @subject %>
+    </title>
+  </head>
+  <body>
+    <h4>Configuration Data:</h4>
+
+    <% unless @instance.service_slug == 'all' %>
+      <ul>
+        <li>
+          Host: <%= @instance.foreign_instance_data.first[ 'host' ] %>
+        </li>
+        <li>
+          Port: <%= @instance.foreign_instance_data.first[ 'port' ] %>
+        </li>
+      </ul>
+    <% end %>
+
+    <%= render :partial => "instance_mailer/creation_email/#{ @instance.service_slug }" %>
+
+    <p>
+      Please respond directly to this email with any questions or problems.
+    </p>
+
+    <p>
+      Thanks!
+    </p>
+
+    <p>
+      GridKick Team
+    </p>
+  </body>
+</html>

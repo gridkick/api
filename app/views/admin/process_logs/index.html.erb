@@ -1,0 +1,13 @@
+<h2>Process Logs</h2>
+
+<table>
+  <tr>
+  </tr>
+  <% @process_logs.each do |process_log|  %>
+    <tr>
+      <%= process_log.inspect %>
+      <br>
+      <br>
+    </tr>
+  <% end %>
+</table>

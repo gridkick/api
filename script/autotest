@@ -1,0 +1,41 @@
+#!/usr/bin/env ruby
+
+##
+#
+# ::Usage::
+#
+# script/autotest
+#
+# Runs and re-runs tests when seeing file changes
+#
+# Accepts one optional parameter, which is the test type to run
+# e.g. all, integration, functional, or unit
+# _all_ is the default
+#
+# OR accepts an individual file to run
+#
+# script/autotest integration
+# script/autotest functional
+# script/autotest unit
+# script/autotest test/unit/app/conductors/create_user_conductor_test.rb
+#
+
+unless ( `which rego` and $?.success? )
+  warn 'You need `rego` to run this script -- gem install rego'
+  exit 1
+end
+
+prefix = ''
+if ENV[ 'USE_BUNDLER' ]
+  prefix += 'bundle exec'
+end
+
+command =
+  case ARGV[ 0 ]
+  when 'all' , 'functional' , 'integration' , 'unit' , nil
+    "#{ prefix } rake test:#{ ARGV[ 0 ] or 'all' }"
+  else
+    "#{ prefix } ruby -Itest #{ ARGV[ 0 ] }"
+  end
+
+exec "rego {app,config,lib,test} -- #{ command }"

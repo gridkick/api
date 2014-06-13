@@ -1,0 +1,15 @@
+Configuration Data:
+
+<% unless @instance.service_slug == 'all' %>
+  Host: <%= @instance.foreign_instance_data.first[ 'host' ] %>
+
+  Port: <%= @instance.foreign_instance_data.first[ 'port' ] %>
+<% end %>
+
+<%= render :partial => "instance_mailer/creation_email/#{ @instance.service_slug }" %>
+
+Please respond directly to this email with any questions or problems.
+
+Thanks!
+
+GridKick Team

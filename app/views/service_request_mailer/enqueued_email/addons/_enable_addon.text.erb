@@ -1,0 +1,4 @@
+<%
+  plugin_text = @service_request.request_data.fetch( 'addon_key' , 'unknown' ).titleize
+%>
+Requested Change: Enable <%= plugin_text %> Addon

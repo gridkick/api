@@ -1,0 +1,5 @@
+You can try it out right away by running the `PING` command from `redis-cli`:
+
+redis-cli -h <%= @instance.foreign_instance_data.first[ 'host' ] %> -p <%= @instance.foreign_instance_data.first[ 'port' ] %> PING
+
+If the above command is successful, you will see the word "PONG" printed out on your terminal.

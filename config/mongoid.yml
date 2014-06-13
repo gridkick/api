@@ -1,0 +1,48 @@
+---
+production:
+  sessions:
+    default:  
+      database: adventure_alpha
+      username: <%= ENV['DB_PRODUCTION_USERNAME'] %>
+      password: <%= ENV['DB_PRODUCTION_PASSWORD'] %>
+      hosts:
+        - 198.199.72.195:9171
+  options:
+    allow_dynamic_fields: false
+    scope_overwrite_exception: true
+staging:
+  sessions:
+    default:
+      database: adventure_alpha-staging
+      hosts:
+        - 192.241.251.141:9171
+  options:
+    allow_dynamic_fields: false
+    scope_overwrite_exception: true
+local:
+  sessions:
+    default:
+      database: adventure_local
+      hosts:
+        - 192.168.211.214:9171
+  options:
+    allow_dynamic_fields: false
+    scope_overwrite_exception: true
+development:
+  sessions:
+    default:
+      database: adventure_development
+      hosts:
+        - localhost:27017
+  options:
+    allow_dynamic_fields: false
+    scope_overwrite_exception: true
+test:
+  sessions:
+    default:
+      database: adventure_test
+      hosts:
+        - localhost:27017
+  options:
+    allow_dynamic_fields: false
+    scope_overwrite_exception: true

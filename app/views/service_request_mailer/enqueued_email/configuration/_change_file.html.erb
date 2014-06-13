@@ -1,0 +1,8 @@
+<%
+  file_key = @service_request.request_data.fetch 'file_key' , 'unknown'
+%>
+<p>
+  Requested Change: Update configuration file
+  <br />
+  File Key: <%= file_key %>
+</p>

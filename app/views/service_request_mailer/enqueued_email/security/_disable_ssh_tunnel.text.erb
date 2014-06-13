@@ -1,0 +1,7 @@
+<%
+  public_key = @service_request.request_data.fetch 'public_key' , 'unknown'
+%>
+Requested Change: Remove public key from server SSH authorized keys
+
+Public Key:
+<%= public_key %>

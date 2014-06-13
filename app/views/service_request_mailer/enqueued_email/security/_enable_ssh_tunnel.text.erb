@@ -1,0 +1,7 @@
+<%
+  public_key = @service_request.request_data.fetch 'public_key' , 'unknown'
+%>
+Requested Change: Add new public key to server SSH authorized keys
+
+Public Key:
+<%= public_key %>

@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>
+      <%= @subject %>
+    </title>
+  </head>
+  <body>
+    <%
+      service = @service_request.instance.service_slug.titleize
+      instance_id = @service_request.instance.id
+    %>
+    <p>
+      We have received a change request for your <%= service %> server [#<%= instance_id %>].
+    </p>
+
+    <%= render :partial => partial_name %>
+
+    <p>
+      Please send us any questions or feedback by replying to this email. Thanks!
+    </p>
+
+    <p>
+      GridKick Team
+    </p>
+  </body>
+</html>
